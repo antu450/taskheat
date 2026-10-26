@@ -1,0 +1,6 @@
+node_modules
+dist
+.DS_Store
+*.local
+coverage
+/edge_audit_profile/

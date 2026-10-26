@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TaskHeat — Daily Task Tracker &amp; Heatmap</title>
+    <meta
+      name="description"
+      content="Offline daily task tracker with a GitHub-style activity heatmap and task roulette. No accounts, zero trackers, 100% private."
+    />
+    <link rel="canonical" href="https://taskheat.app/" />
+    <meta name="theme-color" content="#0d1117" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- Strict Content Security Policy (no inline scripts, self-contained assets) -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' ws: wss:; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';"
+    />
+
+    <!-- PWA Web App Manifest & App Icons -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icon-maskable.svg" />
+
+    <!-- Open Graph Meta Tags (Facebook, LinkedIn, Discord) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://taskheat.app/" />
+    <meta property="og:title" content="TaskHeat — Daily Task Tracker &amp; Heatmap" />
+    <meta
+      property="og:description"
+      content="Offline daily task tracker with a GitHub-style activity heatmap and task roulette. 100% private."
+    />
+    <meta property="og:image" content="https://taskheat.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://taskheat.app/" />
+    <meta name="twitter:title" content="TaskHeat — Daily Task Tracker &amp; Heatmap" />
+    <meta
+      name="twitter:description"
+      content="Offline daily task tracker with a GitHub-style activity heatmap and task roulette. 100% private."
+    />
+    <meta name="twitter:image" content="https://taskheat.app/og-image.png" />
+
+    <style>
+      /* Critical initial render: avoid flash of unstyled page background */
+      html, body { background: #0d1117; color: #e6edf3; margin: 0; }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div id="banner-root"></div>
+    <header class="app-header">
+      <!-- Script populates accessible logo mark + wordmark -->
+      <noscript>
+        <h1>TaskHeat</h1>
+        <p>Track daily tasks. Green squares are saved, completed work.</p>
+      </noscript>
+    </header>
+    <div id="app">
+      <main id="main-content">
+        <div id="heatmap-root"></div>
+        <div id="day-root"></div>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
